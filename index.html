@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#151d22">
+  <title>StyleHub — Wear Your Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home"><span class="brand-mark">S</span> Style<span>Hub</span></a>
+  <nav class="main-nav" aria-label="Main navigation">
+    <a class="nav-active" href="#home">Home</a><a href="#shop" data-nav-category="Men">Men</a>
+    <a href="#shop" data-nav-category="Women">Women</a><a href="#shop" data-nav-category="Accessories">Accessories</a>
+    <a href="#story">Our Story</a>
+  </nav>
+  <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Search your style…" aria-label="Search products"></label>
+  <div class="header-actions">
+    <button class="header-icon wishlist-top" id="wishlist-view" aria-label="Show wishlist">♡</button>
+    <button class="bag-button" id="open-cart">Bag <span id="cart-count">0</span></button>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-backdrop"></div>
+    <div class="hero-copy">
+      <div class="overline"><span></span> THE NEW SEASON / 2026</div>
+      <h1>Dress your<br><em>own story.</em></h1>
+      <p>Modern essentials. Effortless confidence.<br class="desktop-only"> Find the pieces that feel like you.</p>
+      <a class="gold-button" href="#shop">Explore the collection <span>↗</span></a>
+      <div class="hero-meta"><span class="meta-line"></span> Carefully chosen. Made for every day.</div>
+    </div>
+    <div class="hero-image-wrap">
+      <img class="hero-image" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1500&q=90" alt="Friends exploring a modern fashion collection">
+      <div class="hero-image-shade"></div>
+      <div class="hero-roundel"><span>STYLE</span><b>IS<br>YOUR<br>STORY</b><span>✳</span></div>
+      <div class="hero-caption"><span>01 / NEW ARRIVALS</span><b>Everyday, elevated.</b></div>
+    </div>
+    <div class="hero-index">01 <span>—</span> 04</div>
+  </section>
+
+  <section class="category-section page-wrap" aria-label="Shop by category">
+    <div class="section-topline"><span>FIND YOUR FIT</span><span>01 — CATEGORIES</span></div>
+    <div class="category-row">
+      <button class="category-tile selected" data-category="All"><span class="category-symbol symbol-all">✳</span><span><small>THE WHOLE EDIT</small><b>Shop All</b></span><i>↗</i></button>
+      <button class="category-tile" data-category="Men"><span class="category-symbol symbol-men">◒</span><span><small>EVERYDAY ICONS</small><b>For Him</b></span><i>↗</i></button>
+      <button class="category-tile" data-category="Women"><span class="category-symbol symbol-women">✿</span><span><small>MADE TO MOVE</small><b>For Her</b></span><i>↗</i></button>
+      <button class="category-tile" data-category="Accessories"><span class="category-symbol symbol-accessories">◇</span><span><small>THE FINISHING TOUCH</small><b>Accessories</b></span><i>↗</i></button>
+    </div>
+  </section>
+
+  <section class="shop-section page-wrap" id="shop">
+    <div class="shop-heading">
+      <div><div class="section-topline"><span>THE STYLE EDIT</span><span>02 — OUR FAVOURITES</span></div><h2>Good things.<br><em>Great style.</em></h2></div>
+      <div class="shop-intro"><p>Meet your new wardrobe favourites — versatile pieces, considered details, and styles you'll reach for again and again.</p>
+        <select id="sort" aria-label="Sort products"><option value="featured">Sort: Featured</option><option value="low">Price: Low to high</option><option value="high">Price: High to low</option></select>
+      </div>
+    </div>
+    <div class="active-filter-row"><span id="results-label">ALL PIECES</span><span id="results-count">8 pieces</span></div>
+    <div class="product-grid" id="product-grid"></div>
+  </section>
+
+  <section class="promo-strip">
+    <div class="promo-item"><span class="promo-icon">↗</span><div><b>Free shipping</b><small>On orders above ₹999</small></div></div>
+    <div class="promo-item"><span class="promo-icon">◇</span><div><b>Thoughtfully selected</b><small>Everyday style, made easy</small></div></div>
+    <div class="promo-item"><span class="promo-icon">↺</span><div><b>Easy returns</b><small>A smoother shopping experience</small></div></div>
+    <div class="promo-item"><span class="promo-icon">♡</span><div><b>Here for you</b><small>Support when you need it</small></div></div>
+  </section>
+
+  <section class="story-section page-wrap" id="story">
+    <div class="story-photo"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1100&q=85" alt="Thoughtfully styled wardrobe essentials" loading="lazy"><span class="photo-sticker">LESS, BUT<br><em>BETTER.</em></span></div>
+    <div class="story-content"><div class="section-topline"><span>A NOTE FROM US</span><span>03 — OUR STORY</span></div><h2>Fashion should<br>feel like <em>you.</em></h2><p>We believe the best wardrobe isn't about having more. It's about finding the pieces that make you feel comfortable, confident, and completely yourself.</p><p>From everyday essentials to standout favourites, StyleHub makes personal style a little simpler.</p><a href="#shop" class="text-link">GET TO KNOW THE COLLECTION <span>↗</span></a></div>
+  </section>
+
+  <section class="newsletter">
+    <div class="newsletter-orb">S<span>✳</span></div>
+    <div><div class="section-topline"><span>THE STYLE LETTER</span></div><h2>A good look starts<br>with a little inspiration.</h2><p>New drops, outfit ideas, and notes from StyleHub.</p></div>
+    <form id="newsletter-form"><label for="newsletter-email">YOUR EMAIL ADDRESS</label><div class="email-entry"><input id="newsletter-email" type="email" placeholder="you@example.com" required><button type="submit" aria-label="Subscribe">↗</button></div><small id="newsletter-status">No spam. Just the good stuff.</small></form>
+  </section>
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="footer-main"><div><a class="brand footer-brand" href="#home"><span class="brand-mark">S</span> Style<span>Hub</span></a><p>Wear what feels like you.</p></div><div class="footer-links"><a href="#home">Home</a><a href="#shop">Shop collection</a><a href="#story">Our story</a><a href="mailto:hello@example.com">Contact</a></div><div class="footer-social"><span>FOLLOW OUR WORLD</span><div><a href="#contact" aria-label="Instagram">ig</a><a href="#contact" aria-label="Pinterest">p</a><a href="#contact" aria-label="TikTok">♪</a></div></div></div>
+  <div class="footer-bottom"><span>© 2026 StyleHub · College project demo</span><span>Made for your everyday.</span></div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+  <div class="drawer-heading"><div><small>YOUR SELECTION</small><h2>Your bag <span id="drawer-count">(0)</span></h2></div><button id="close-cart" aria-label="Close cart">×</button></div>
+  <div class="drawer-items" id="cart-items"></div>
+  <div class="drawer-bottom"><div class="subtotal"><span>Subtotal</span><b id="cart-total">₹0</b></div><p>Shipping is calculated at checkout.</p><button class="gold-button checkout-button" id="checkout">Continue to checkout <span>↗</span></button><small class="demo-note">Demo checkout · no payment is taken</small></div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
